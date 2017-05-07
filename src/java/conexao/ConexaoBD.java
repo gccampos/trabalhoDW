@@ -42,7 +42,7 @@ public class ConexaoBD {
 
     public void init() {
         try {
-            conexao = DriverManager.getConnection("jdbc:derby://localhost:1527/sample","app","app");
+            conexao = DriverManager.getConnection("jdbc:derby://localhost:1527/prata","app","app");
         } catch (Exception ex) {
         }
     }

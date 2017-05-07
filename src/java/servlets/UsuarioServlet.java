@@ -17,15 +17,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
+import model.Usuario;
 import model.ValidaEmail;
 
 /**
  *
  * @author Salle
  */
-@WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
-public class UserServlet extends HttpServlet {
+@WebServlet(name = "UsuarioServlet", urlPatterns = {"/UsuarioServlet"})
+public class UsuarioServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -59,14 +59,14 @@ public class UserServlet extends HttpServlet {
 
             //se os dados forem validados, cria cadastro  
             if (cadastroIsValid) {
-                User user = new User(nome, endereco, telefone, email);
-                user.addUser();
-                response.sendRedirect("sucessoCadastroCliente.jsp");
+                Usuario user = new Usuario(nome, endereco, telefone, email);
+                user.addUsuario();
+                response.sendRedirect("sucessoCadastroUser.jsp");
             } else {
                 //se os dados não forem validados, retorna para a página anterior
                 String erro = "Houve algum problema com seu cadastro! Por favor, preencha o formulário abaixo novamente conforme as recomendações em cada campo.";
                 request.setAttribute("erro", erro);
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/cadastroCliente.jsp");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/cadastroUser.jsp");
                 if (dispatcher != null) {
                     dispatcher.forward(request, response);
                 }
@@ -89,7 +89,7 @@ public class UserServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -107,7 +107,7 @@ public class UserServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

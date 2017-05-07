@@ -7,11 +7,13 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
 
 /**
  *
  * @author Salle
  */
+@Entity
 public class Nota {
     private List<Long> notaConhecido;
     private List<Long> notaHospedagem;

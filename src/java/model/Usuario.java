@@ -5,20 +5,23 @@
  */
 package model;
 
-import DAO.UserDAO;
+import DAO.UsuarioDAO;
 import java.sql.SQLException;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import org.jboss.weld.util.LazyValueHolder.Serializable;
 
 /**
  *
  * @author Salle
  */
 @Entity
-public class User {
+@Table(name = "USUARIO")
+public class Usuario extends Serializable {
     @Id
     @GeneratedValue
     private int userId;
@@ -29,9 +32,9 @@ public class User {
     private String email;
     private String esporteFavorito = "Surf";
     @OneToMany
-    private List<User> amigos;
+    private List<Usuario> amigos;
 
-    public User(String nome, String endereco, String telefone, String email) {
+    public Usuario(String nome, String endereco, String telefone, String email) {
         this.nota = new Nota(userId);
         this.nome = nome;
         this.endereco = endereco;
@@ -103,16 +106,21 @@ public class User {
         this.nota.setNotaEsporte(nota);
     }
     
-    public List<User> getAmigos() {
+    public List<Usuario> getAmigos() {
         return amigos;
     }
     
-    public void addAmigo(User user) {
+    public void addAmigo(Usuario user) {
         this.amigos.add(user);
     }
 
-    public void addUser() throws SQLException {
-        UserDAO.criaUser(this);
+    public void addUsuario() throws SQLException {
+        UsuarioDAO.criaUsuario(this);
+    }
+
+    @Override
+    protected Object computeValue() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

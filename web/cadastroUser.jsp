@@ -22,7 +22,7 @@
                 </h1>
             </div> 
             <%@ include file="erros.jsp" %>
-            <form method="post" role="form" action="UserServlet">
+            <form method="post" role="form" action="UsuarioServlet">
                 <div class="form-group">
                     <label for="nome">Nome: </label>
                     <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome">
