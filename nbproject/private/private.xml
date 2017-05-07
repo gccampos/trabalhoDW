@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/model/Aplicacao.java</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/servlets/UserServlet.java</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/model/Nota.java</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/web/WEB-INF/web.xml</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/web/sucessoCadastroUser.jsp</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/conexao/ConexaoBD.java</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/web/cadastroUser.jsp</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/DAO/UserDAO.java</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/hibernate.cfg.xml</file>
+            <file>file:/home/Salle/Salle/UFF/trabalhoDW/src/java/model/User.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,6 +5,8 @@
  */
 package model;
 
+import DAO.UserDAO;
+import java.sql.SQLException;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,17 +24,17 @@ public class User {
     private int userId;
     private Nota nota;
     private String nome;
-    private String endereço;
+    private String endereco;
     private String telefone;
     private String email;
     private String esporteFavorito = "Surf";
     @OneToMany
     private List<User> amigos;
 
-    public User(String nome, String endereço, String telefone, String email) {
+    public User(String nome, String endereco, String telefone, String email) {
         this.nota = new Nota(userId);
         this.nome = nome;
-        this.endereço = endereço;
+        this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
     }
@@ -49,12 +51,12 @@ public class User {
         this.nome = nome;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereço) {
+        this.endereco = endereço;
     }
 
     public String getTelefone() {
@@ -107,6 +109,10 @@ public class User {
     
     public void addAmigo(User user) {
         this.amigos.add(user);
+    }
+
+    public void addUser() throws SQLException {
+        UserDAO.criaUser(this);
     }
     
 }

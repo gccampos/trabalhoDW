@@ -22,7 +22,7 @@
                 </h1>
             </div> 
             <%@ include file="erros.jsp" %>
-            <form method="post" role="form" action="ServletCadastroCliente">
+            <form method="post" role="form" action="UserServlet">
                 <div class="form-group">
                     <label for="nome">Nome: </label>
                     <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome">
@@ -31,11 +31,6 @@
                     <label for="email">E-mail </label>
                     <small><em>(nome@exemplo.com)</em>:</small>
                     <input type="text" class="form-control" id="email" placeholder="E-mail" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="cpf">CPF </label>
-                    <small><em>(Apenas números)</em>:</small>
-                    <input type="text" class="form-control" id="cpf" placeholder="CPF" name="cpf">
                 </div>
                 <div class="form-group">
                     <label for="endereco">Endereço: </label>
