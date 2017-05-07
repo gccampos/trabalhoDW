@@ -1,5 +1,6 @@
 package model;
 
+
 import DAO.DAOResgate;
 import java.sql.SQLException;
 import java.util.Date;
@@ -15,7 +16,7 @@ public class Resgate extends Transacao {
     }
 
     //método que efetua um resgate
-    void doResgate() throws SQLException {
+    public void doResgate() throws SQLException {
         DAOResgate.doResgate(this);
     }
     

@@ -10,12 +10,12 @@ import model.ConexaoBD;
 import model.Conta;
 import model.Investimento;
 
-class DAOAplicacao {
+public class DAOAplicacao {
 
     private static Connection conexao = ConexaoBD.getInstance().getConexao();
 
     //método que atualiza o valor investido de um investimento após uma aplicação
-    static void doAplicacao(Aplicacao aplicacao) throws SQLException {
+    public static void doAplicacao(Aplicacao aplicacao) throws SQLException {
         Investimento investimento = Conta.getConta(aplicacao.getCodigoContaOrigem()).getInvestimento();
         try (PreparedStatement sql = conexao.prepareStatement("update investimento set valorInvestido = ? where codigoConta = ?")) {
             sql.setDouble(1, investimento.getValorInvestido() + aplicacao.getValor());

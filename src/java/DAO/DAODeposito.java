@@ -1,19 +1,20 @@
 package DAO;
 
-import br.uff.ic.ConexaoBD;
-import br.uff.ic.Conta;
-import br.uff.ic.Deposito;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import model.ConexaoBD;
+import model.Conta;
+import model.Deposito;
 
 public class DAODeposito {
 
     private static Connection conexao = ConexaoBD.getInstance().getConexao();
 
     //método que atualiza o saldo de uma conta após um depósito
-    static void doDeposito(Deposito deposito) throws SQLException {
+    public static void doDeposito(Deposito deposito) throws SQLException {
         Conta contaDestino = Conta.getConta(deposito.getCodigoContaDestino());
         try (PreparedStatement sql = conexao.prepareStatement("update conta set saldo = ? where codigoConta = ?")) {
             sql.setDouble(1, contaDestino.getSaldo() + deposito.getValor());

@@ -1,19 +1,19 @@
 package DAO;
 
-import br.uff.ic.Aplicacao;
-import br.uff.ic.ConexaoBD;
-import br.uff.ic.Conta;
-import br.uff.ic.Deposito;
-import br.uff.ic.Resgate;
-import br.uff.ic.Saque;
-import br.uff.ic.Transacao;
-import br.uff.ic.Transferencia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import model.Aplicacao;
+import model.ConexaoBD;
+import model.Conta;
+import model.Deposito;
+import model.Resgate;
+import model.Saque;
+import model.Transacao;
+import model.Transferencia;
 
 public class DAOTransacao {
 

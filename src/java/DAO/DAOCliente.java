@@ -1,11 +1,11 @@
 package DAO;
 
-import br.uff.ic.Cliente;
-import br.uff.ic.ConexaoBD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import model.Cliente;
+import model.ConexaoBD;
 
 public class DAOCliente {
 

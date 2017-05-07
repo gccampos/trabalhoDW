@@ -1,12 +1,12 @@
 package DAO;
 
-import br.uff.ic.ConexaoBD;
-import br.uff.ic.Conta;
-import br.uff.ic.Transferencia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import model.ConexaoBD;
+import model.Conta;
+import model.Transferencia;
 
 public class DAOTransferencia {
     

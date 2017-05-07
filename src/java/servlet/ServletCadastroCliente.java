@@ -1,7 +1,7 @@
 package servlet;
 
-import br.uff.ic.ValidaCpf;
-import br.uff.ic.ValidaEmail;
+import valida.ValidaEmail;
+import valida.ValidaCpf;
 import model.Cliente;
 import java.io.IOException;
 import java.io.PrintWriter;

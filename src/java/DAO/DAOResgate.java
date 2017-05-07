@@ -1,20 +1,21 @@
 package DAO;
 
-import br.uff.ic.ConexaoBD;
-import br.uff.ic.Conta;
-import br.uff.ic.Investimento;
-import br.uff.ic.Resgate;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import model.ConexaoBD;
+import model.Conta;
+import model.Resgate;
+import model.Investimento;
 
-class DAOResgate {
+public class DAOResgate {
     
     private static Connection conexao = ConexaoBD.getInstance().getConexao();
 
     //método que atualiza o valor investido de um investimento após um resgate
-    static void doResgate(Resgate resgate) throws SQLException {
+    public static void doResgate(Resgate resgate) throws SQLException {
         Investimento investimento = Conta.getConta(resgate.getCodigoContaOrigem()).getInvestimento();
         try (PreparedStatement sql = conexao.prepareStatement("update investimento set valorInvestido = ? where codigoConta = ?")) {
             sql.setDouble(1, investimento.getValorInvestido() - resgate.getValor());

@@ -1,11 +1,11 @@
 package DAO;
 
-import br.uff.ic.ConexaoBD;
-import br.uff.ic.Saque;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import model.ConexaoBD;
+import model.Saque;
 
 public class DAOSaque {
 

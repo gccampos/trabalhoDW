@@ -1,14 +1,15 @@
 package DAO;
 
-import br.uff.ic.Cliente;
-import br.uff.ic.ConexaoBD;
-import br.uff.ic.ContaCliente;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import model.Cliente;
+import model.ConexaoBD;
+import model.ContaCliente;
 
 public class DAOContaCliente {
 

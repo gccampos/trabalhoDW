@@ -3,7 +3,6 @@ package model;
 import DAO.DAOAplicacao;
 import java.sql.SQLException;
 import java.util.Date;
-
 /**
  * Classe que representa um tipo de transação
  */
@@ -15,7 +14,7 @@ public class Aplicacao extends Transacao {
     }
 
     //método que efetua uma aplicação
-    void doAplicacao() throws SQLException {
+    public void doAplicacao() throws SQLException {
         DAOAplicacao.doAplicacao(this);
     }
     
